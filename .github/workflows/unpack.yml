@@ -1,0 +1,36 @@
+name: Fix NINETY structure
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Unpack NINETY
+        run: |
+          mkdir extracted
+          unzip -q NINETY_V1_FOUNDATION.zip -d extracted
+
+          find . -maxdepth 1 -type f \
+            ! -name "NINETY_V1_FOUNDATION.zip" \
+            ! -name ".gitignore" \
+            -delete
+
+          cp -R extracted/. .
+          rm -rf extracted
+
+      - name: Commit corrected structure
+        run: |
+          git config user.name "NINETY Builder"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Fix NINETY project structure" || exit 0
+          git push
