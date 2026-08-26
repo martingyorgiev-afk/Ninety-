@@ -1,0 +1,45 @@
+
+:root{
+  --bg:#f6f6f8;
+  --surface:#ffffff;
+  --text:#111114;
+  --muted:#777780;
+  --line:#e7e7eb;
+  --brand:#cf176a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif}
+button{font:inherit}
+body{min-height:100vh}
+.shell{max-width:520px;margin:0 auto;min-height:100vh;background:#fbfbfc;padding-bottom:94px}
+.appHeader{display:flex;justify-content:space-between;align-items:center;padding:22px 22px 12px}
+.brand{font-weight:950;font-size:30px;letter-spacing:.06em;font-style:italic}
+.tagline{font-weight:800;color:var(--brand);font-size:12px;letter-spacing:.12em}
+.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#f3d9e5;color:var(--brand);font-weight:900}
+.content{padding:0 16px 24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:0 8px 24px rgba(0,0,0,.035)}
+.heroCard{display:grid;grid-template-columns:1.45fr .75fr;gap:12px;padding:20px}
+.eyebrow,.sectionLabel{font-size:11px;color:var(--muted);font-weight:800;letter-spacing:.06em}
+.weight{font-size:53px;font-weight:400;line-height:1.05;margin-top:4px}
+.weight span{font-size:20px;color:var(--muted)}
+.subtle{font-size:13px;color:#59b83c;margin-top:6px}
+.goalBar{height:8px;background:#f1f1f3;border-radius:99px;margin:18px 0 7px;overflow:hidden}
+.goalBar span{display:block;height:100%;background:linear-gradient(90deg,#f7c9db,var(--brand));border-radius:99px}
+.goalMeta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.goalMeta b{color:var(--text)}
+.goalCircle{width:112px;height:112px;border-radius:50%;place-self:center;background:conic-gradient(var(--brand) var(--p),#f3e4eb 0);display:grid;place-items:center}
+.goalCircle:before{content:"";position:absolute}
+.goalCircle>div{width:88px;height:88px;border-radius:50%;background:#fff;display:grid;place-content:center;text-align:center}
+.goalCircle strong{font-size:26px}
+.goalCircle span{font-size:9px;color:var(--muted)}
+.metricGrid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:12px;padding:16px 10px}
+.ringCard{text-align:center}.ringWrap{width:98px;height:98px;margin:auto;position:relative}.ringSvg{width:100%;height:100%;transform:rotate(-90deg)}.ringBg,.ringFg{fill:none;stroke-width:9}.ringBg{stroke:#f0f0f2}.ringFg{stroke-linecap:round;transition:stroke-dashoffset .4s ease}.ringCenter{position:absolute;inset:0;display:grid;place-items:center}.ringCenter strong{font-size:18px}.ringLabel{font-size:11px;color:var(--muted)}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:12px;margin-top:12px}.nextWorkout,.readiness{padding:16px}.workoutBody{display:flex;justify-content:space-between;align-items:center}.nextWorkout h2{font-size:28px;margin:8px 0 2px}.nextWorkout p{margin:0;color:var(--muted)}.nextWorkout small{color:var(--muted)}.lineIcon{color:var(--brand);background:#fbecf2;border-radius:18px;padding:13px}.primary{margin-top:16px;width:100%;border:0;background:#111114;color:#fff;border-radius:15px;padding:13px;font-weight:800;display:flex;justify-content:center;gap:6px;align-items:center}.readinessScore{font-size:42px;margin-top:9px}.readinessScore span{font-size:20px}.recoveryStat{border-top:1px solid var(--line);margin-top:20px;padding-top:14px}.recoveryStat span{display:block;color:var(--muted);font-size:11px}.recoveryStat strong{font-size:24px}
+.insight{margin-top:12px;padding:17px;display:grid;grid-template-columns:46px 1fr 20px;gap:12px;align-items:center;background:linear-gradient(135deg,#fff,#fff7fa)}.insightIcon{width:46px;height:46px;border-radius:50%;background:#fae2ec;color:var(--brand);display:grid;place-items:center}.insight h3{margin:5px 0 3px;font-size:16px}.insight p{margin:0;color:var(--muted);font-size:12px;line-height:1.35}.chev{color:#aaa}
+.triple{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.miniCard{padding:13px;min-height:178px}.miniCard button{border:0;background:none;color:var(--brand);font-size:11px;padding:0}.bodyGlyph{font-size:38px;line-height:.75;color:#8b8b92;text-align:center;margin:20px 0}.miniWeight{font-size:26px;margin-top:12px}.miniWeight span{font-size:13px;color:var(--muted)}.trophy{width:62px;height:62px;border:3px solid var(--brand);border-radius:18px;color:var(--brand);display:grid;place-items:center;margin:21px auto 10px}.miniCard strong,.miniCard small{display:block;text-align:center}.miniCard small{color:var(--muted);font-size:10px}
+.bottomNav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(520px,100%);display:grid;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.94);backdrop-filter:blur(20px);border-top:1px solid var(--line);padding:9px 6px calc(9px + env(safe-area-inset-bottom));z-index:20}.bottomNav button{border:0;background:none;color:#8b8b94;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px}.bottomNav button.active{color:var(--brand)}
+@media(max-width:430px){
+  .heroCard{grid-template-columns:1.3fr .7fr}
+  .goalCircle{width:98px;height:98px}.goalCircle>div{width:76px;height:76px}
+  .ringWrap{width:88px;height:88px}.split{grid-template-columns:1fr 1fr}
+}
