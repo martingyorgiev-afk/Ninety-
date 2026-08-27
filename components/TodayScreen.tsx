@@ -1,6 +1,7 @@
-import Link from "next/link";
+
 "use client";
 
+import Link from "next/link";
 import { Brain, ChevronRight, Dumbbell, Trophy } from "lucide-react";
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import ProgressRing from "./ProgressRing";
