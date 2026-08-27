@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 "use client";
 
 import { Brain, ChevronRight, Dumbbell, Trophy } from "lucide-react";
