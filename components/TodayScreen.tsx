@@ -58,7 +58,9 @@ export default function TodayScreen({ data }: { data: TodayData }) {
               </div>
               <div className="lineIcon"><Dumbbell size={44}/></div>
             </div>
-            <button className="primary">Start Workout <ChevronRight size={18}/></button>
+         <Link href="/train" className="primary">
+  Start Workout <ChevronRight size={18} />
+</Link>
           </article>
 
           <article className="card readiness">
